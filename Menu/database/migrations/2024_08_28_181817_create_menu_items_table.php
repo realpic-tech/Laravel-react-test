@@ -13,7 +13,15 @@ return new class extends Migration
     {
         Schema::create('menu_items', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('menu_id');
+            $table->string('title');
+            $table->string('url')->nullable();
+            $table->unsignedBigInteger('parent_id')->nullable();
+            $table->integer('order')->default(0);
             $table->timestamps();
+
+            $table->foreign('menu_id')->references('id')->on('menus')->onDelete('cascade');
+            $table->foreign('parent_id')->references('id')->on('menu_items')->onDelete('cascade');
         });
     }
 
