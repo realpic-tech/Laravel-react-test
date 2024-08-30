@@ -1,21 +1,23 @@
 <?php
-
 namespace App\Models;
-
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class MenuItem extends Model
 {
-    protected $fillable = ['menu_id', 'title', 'url', 'parent_id', 'order'];
+    protected $fillable = ['name', 'parent_id', 'depth', 'menu_id'];
 
-    public function menu()
+    public function parent()
     {
-        return $this->belongsTo(Menu::class);
+        return $this->belongsTo(MenuItem::class, 'parent_id');
     }
 
     public function children()
     {
-        return $this->hasMany(MenuItem::class, 'parent_id')->orderBy('order');
+        return $this->hasMany(MenuItem::class, 'parent_id')->with('children');
+    }
+
+    public function scopeRoot($query)
+    {
+        return $query->whereNull('parent_id');
     }
 }
