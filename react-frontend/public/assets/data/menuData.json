@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "name": "System Management",
+    "depth": 0,
+    "parentId": null,
+    "subMenus": [
+      {
+        "id": 2,
+        "name": "Systems",
+        "depth": 1,
+        "parentId": 1,
+        "subMenus": [
+          {
+            "id": 3,
+            "name": "System Code",
+            "depth": 2,
+            "parentId": 2,
+            "subMenus": [
+              { "id": 4, "name": "Code Registration", "depth": 3, "parentId": 3 }
+            ]
+          },
+          {
+            "id": 18,
+            "name": "Code Registration - 2",
+            "depth": 2,
+            "parentId": 2
+          },
+          { "id": 5, "name": "Properties", "depth": 2, "parentId": 2 },
+          {
+            "id": 6,
+            "name": "Menu",
+            "depth": 2,
+            "parentId": 2,
+            "subMenus": [
+              { "id": 7, "name": "Menu Registration", "depth": 3, "parentId": 6 }
+            ]
+          },
+          {
+            "id": 8,
+            "name": "API List",
+            "depth": 2,
+            "parentId": 2,
+            "subMenus": [
+              { "id": 9, "name": "API Registration", "depth": 3, "parentId": 8 },
+              { "id": 10, "name": "API Edit", "depth": 3, "parentId": 8 }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 11,
+        "name": "Users & Groups",
+        "depth": 1,
+        "parentId": 1,
+        "subMenus": [
+          {
+            "id": 12,
+            "name": "Users",
+            "depth": 2,
+            "parentId": 11,
+            "subMenus": [
+              { "id": 13, "name": "User Account Registration", "depth": 3, "parentId": 12 }
+            ]
+          },
+          {
+            "id": 14,
+            "name": "Groups",
+            "depth": 2,
+            "parentId": 11,
+            "subMenus": [
+              { "id": 15, "name": "User Group Registration", "depth": 3, "parentId": 14 }
+            ]
+          },
+          {
+            "id": 19,
+            "name": "사용자 승인",
+            "depth": 2,
+            "parentId": 11,
+            "subMenus": [
+              { "id": 20, "name": "사용자 승인 상세", "depth": 3, "parentId": 19 }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  { "id": 16, "name": "User Management", "depth": 0, "parentId": null },
+  { "id": 17, "name": "API Configuration", "depth": 0, "parentId": null }
+]

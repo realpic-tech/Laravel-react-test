@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "esnext",                        // Target modern JavaScript
+    "module": "CommonJS",                      // Use CommonJS modules (default for Node.js)
+    "moduleResolution": "Node16",              // Node16 module resolution
+    "strict": true,                            // Enable all strict type-checking options
+    "esModuleInterop": true,                   // Handle CommonJS modules' default imports
+    "skipLibCheck": true,                      // Skip type checking of declaration files
+    "forceConsistentCasingInFileNames": true,  // Enforce consistent casing in imports
+    "resolveJsonModule": true,                 // Enable importing JSON modules
+    "isolatedModules": true                    // Ensure each file is isolated
+  },
+  "include": ["src/**/*.ts"],                  // Include your TypeScript files
+  "exclude": ["node_modules", "dist"]          // Exclude node_modules and build output
+}
